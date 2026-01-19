@@ -4,128 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prairie Grain Solutions - Grain Marketing</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #111;
-      line-height: 1.6;
-      min-height: 100vh;
-      background-color: #f8f9f5;
-    }
-
-    /* Background with blur */
-    .background {
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background-image: url('https://www.shutterstock.com/image-photo/canola-field-yellow-flowers-sunset-600nw-2491357563.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: blur(8px) brightness(0.85);
-    }
-
-    /* Overlay to improve text readability */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(255, 255, 240, 0.68); /* light creamy overlay */
-      z-index: -1;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header {
-      padding: 40px 0 10px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3.8rem;
-      color: #2b2c24;
-      margin-bottom: 0.2em;
-      font-weight: 700;
-      letter-spacing: -1px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-
-    .tagline {
-      font-size: 1.5rem;
-      color: #444;
-      font-weight: 400;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-
-    .content {
-      max-width: 820px;
-      margin: 0 auto 80px;
-      background: rgba(255,255,255,0.92);
-      padding: 50px;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      backdrop-filter: blur(4px);
-    }
-
-    h2 {
-      color: #2a5c4a;
-      margin: 0.0em 0 0.0em;
-      font-size: 2.1rem;
-    }
-
-    p {
-      margin-bottom: 1.3em;
-      font-size: 1.1rem;
-    }
-
-    .contact-section {
-      text-align: center;
-      margin-top: 60px;
-      padding-top: 50px;
-      border-top: 1px solid #ddd;
-    }
-
-    .contact-info {
-      font-size: 1.25rem;
-      margin: 1.5rem 0;
-    }
-
-    .highlight {
-      color: #c47c00;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 0;
-      color: #555;
-      font-size: 0.95rem;
-      border-top: 1px solid #e0e0d8;
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 2.8rem; }
-      .tagline { font-size: 1.3rem; }
-      .content { padding: 35px 25px; }
-    }
-
-    .logoImg {
-      clip-path: circle(50%);
-      width: 15%;
-      height: 15%;
-    }
-
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -136,28 +15,65 @@
     
     <header>
       <img class="logoImg" src="Logo.png" >
-      <!--
-      <h1>Prairie Grain Solutions</h1>
-      <div class="tagline">Trusted grain marketing • Fair prices • Reliable service</div>
-      -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          
+          <li class="has-dropdown">
+            <a href="#">Resources</a>
+            <div class="dropdown-content">
+              <a href="https://www.albertagrains.com/" target="_blank" >Industry News</a>
+              <a href="https://www.producer.com/" target="_blank" >Western Producer</a>
+              <a href="https://www.canolacouncil.org/" target="_blank" >Canola Council of Canada</a>
+              <a href="https://www.grainscanada.gc.ca/en/" target="_blank" >Canadian Grain Commission</a>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
     </header>
 
     <div class="content">
       <h2>Welcome to Prairie Grain Solutions</h2>
       <p>We are an independent grain marketing company proudly serving farmers across Alberta, Saskatchewan, and Manitoba.</p>
 
+      <div class="market-section">
+        <div class="market-item">
+          <div class="market-text">
+            <p>The grain markets in the Prairies are shaped by strong global demand for canola, wheat, barley, peas, and oats. Canola remains a top choice for many farmers, with prices influenced by oilseed demand, biofuel needs, and export opportunities. Steady interest from crushers and overseas buyers helps support values throughout the year.</p>
+          </div>
+          <div class="market-img">
+            <img src="https://www.shutterstock.com/image-photo/flowering-canola-field-white-clouds-600nw-2508365539.jpg" alt="Vibrant yellow canola field under blue skies">
+          </div>
+        </div>
+
+        <div class="market-item reverse">
+          <div class="market-text">
+            <p>Wheat and barley markets respond to local feed demand and weather patterns in major growing regions. Farmers often see solid bids for nearby delivery, especially when supplies tighten. Durum and other specialty grains can offer premium pricing depending on quality and market conditions.</p>
+          </div>
+          <div class="market-img">
+            <img src="https://static.albertafarmexpress.ca/wp-content/uploads/2025/12/10124108/235995_web1_wheat-heads-under-late-summer-sky-2024-AS.jpeg" alt="Golden wheat heads in a Prairie field">
+          </div>
+        </div>
+
+        <div class="market-item">
+          <div class="market-text">
+            <p>Prairie producers face ongoing challenges like input costs and weather risks, but flexible marketing options help manage uncertainty. At Prairie Grain Solutions, we provide clear daily bids and straightforward contracts to help you get the best return for your grain, no matter the season. Contact us anytime for the latest market updates.</p>
+          </div>
+          <div class="market-img">
+            <img src="https://media.istockphoto.com/id/1334161295/photo/farmers-hand-examining-barley-field.jpg?s=612x612&w=0&k=20&c=5QXLwSsD42IzYiPCcmaD3SNMktpcyRYA8BVDDXONWEo=" alt="Farmer examining grain crops in the field">
+          </div>
+        </div>
+      </div>
+
+
       
       <div class="contact-section">
         <div class="contact-info">
-          <h2>Contact Us</h2>
-          <strong>Prairie Grain Solutions</strong><br>
-          4726 78A Street Close<br> 
-          Red Deer, Alberta, Canada T4P 2J2
-        </div>
 
-        <div class="contact-info">
-          <!--Phone: <span class="highlight"><a href="tel:4038774019">(403) 877-4019</a></span><br>-->
-          Email: <span class="highlight"><a href="mailto:info@prairiegrainsolutions.ca">info@prairiegrainsolutions.ca</a></span>
+          <a href="contact.html" class="pgs-button">Get a Quote Today</a>
+
         </div>
 
         <p style="margin-top: 2rem; font-style: italic;">

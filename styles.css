@@ -1,0 +1,323 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: #111;
+     line-height: 1.6;
+     min-height: 100vh;
+     background-color: #f8f9f5;
+ }
+
+ .logoImg {
+     clip-path: circle(50%);
+     width: 15%;
+     height: 15%;
+ }
+
+ .background {
+     position: fixed;
+     inset: 0;
+     z-index: -2;
+     background-image: url('https://www.shutterstock.com/image-photo/canola-field-yellow-flowers-sunset-600nw-2491357563.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     filter: blur(8px) brightness(0.85);
+ }
+
+ .overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(255, 255, 240, 0.68);
+     z-index: -1;
+ }
+
+ .container {
+     max-width: 1100px;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ header {
+     padding: 40px 0 0px;
+     text-align: center;
+     position: relative;
+ }
+
+ nav {
+     margin-bottom: 30px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     gap: 2.5rem;
+     flex-wrap: wrap;
+ }
+
+ nav>ul>li {
+     position: relative;
+ }
+
+ nav a {
+     color: #1a3c34;
+     text-decoration: none;
+     font-size: 1.15rem;
+     font-weight: 600;
+     padding: 8px 12px;
+     transition: color 0.3s, background 0.3s;
+     border-radius: 6px;
+     display: block;
+ }
+
+ nav a:hover,
+ nav a:focus {
+     color: #c47c00;
+     background: rgba(196, 124, 0, 0.08);
+ }
+
+ /* Dropdown styles */
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     background: rgba(255, 255, 255, 0.95);
+     min-width: 220px;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+     border-radius: 8px;
+     overflow: hidden;
+     z-index: 10;
+     margin-top: 0px;
+ }
+
+ .dropdown-content a {
+     padding: 12px 20px;
+     font-size: 1.05rem;
+     color: #1a3c34;
+     border-bottom: 1px solid #eee;
+ }
+
+ .dropdown-content a:last-child {
+     border-bottom: none;
+ }
+
+ .dropdown-content a:hover {
+     background: rgba(26, 60, 52, 0.1);
+     color: #c47c00;
+ }
+
+ nav li:hover>.dropdown-content {
+     display: block;
+ }
+
+ /* Arrow indicator for dropdown parent */
+ .has-dropdown>a::after {
+     content: ' ▼';
+     font-size: 0.8rem;
+     margin-left: 4px;
+     opacity: 0.7;
+ }
+
+ h1 {
+     font-size: 3.8rem;
+     color: #1a3c34;
+     margin-bottom: 0.2em;
+     font-weight: 700;
+     letter-spacing: -1px;
+     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+ }
+
+ .tagline {
+     font-size: 1.5rem;
+     color: #444;
+     font-weight: 400;
+     max-width: 700px;
+     margin: 0 auto 2rem;
+ }
+
+ .content {
+     max-width: 820px;
+     margin: 0 auto 80px;
+     background: rgba(255, 255, 255, 0.92);
+     padding: 50px;
+     border-radius: 12px;
+     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+     backdrop-filter: blur(4px);
+ }
+
+ h2 {
+     color: #2a5c4a;
+     margin: 0em 0 0.8em;
+     font-size: 2.1rem;
+ }
+
+ p {
+     margin-bottom: 1.3em;
+     font-size: 1.1rem;
+ }
+
+ .market-section {
+     margin: 60px 0;
+ }
+
+ .market-item {
+     display: flex;
+     align-items: center;
+     gap: 40px;
+     margin-bottom: 60px;
+     flex-wrap: wrap;
+ }
+
+ .market-item.reverse {
+     flex-direction: row-reverse;
+ }
+
+ .market-text {
+     flex: 1;
+     min-width: 300px;
+ }
+
+ .market-img {
+     flex: 1;
+     min-width: 300px;
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+ }
+
+ .market-img img {
+     width: 100%;
+     height: auto;
+     display: block;
+     object-fit: cover;
+ }
+
+ .contact-section {
+     text-align: center;
+     margin-top: 60px;
+     padding-top: 50px;
+     border-top: 1px solid #ddd;
+ }
+
+ #contact {
+     scroll-margin-top: 100px;
+ }
+
+ .contact-info {
+     font-size: 1.25rem;
+     margin: 1.5rem 0;
+ }
+
+ .highlight {
+     color: #c47c00;
+     font-weight: 600;
+ }
+
+ footer {
+     text-align: center;
+     padding: 40px 0;
+     color: #555;
+     font-size: 0.95rem;
+     border-top: 1px solid #e0e0d8;
+ }
+
+ @media (max-width: 768px) {
+     nav ul {
+         gap: 1.5rem;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .dropdown-content {
+         position: static;
+         box-shadow: none;
+         background: rgba(255, 255, 255, 0.9);
+         margin: 8px 0;
+         border-radius: 6px;
+     }
+
+     nav li:hover>.dropdown-content {
+         display: block;
+     }
+
+     h1 {
+         font-size: 2.8rem;
+     }
+
+     .tagline {
+         font-size: 1.3rem;
+     }
+
+     .content {
+         padding: 35px 25px;
+     }
+
+     .market-item,
+     .market-item.reverse {
+         flex-direction: column;
+         gap: 25px;
+         text-align: center;
+     }
+ }
+
+ .pgs-button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #1a3c34;           /* Matches the dark green used in headings */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.3px;
+}
+
+/* Hover state - uses the warm orange accent color */
+.pgs-button:hover,
+.pgs-button:focus {
+  background-color: #c47c00;           /* Matches the .highlight orange */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(196, 124, 0, 0.3);
+}
+
+/* Active / clicked state */
+.pgs-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: secondary / outline variant */
+.pgs-button.secondary {
+  background-color: transparent;
+  color: #1a3c34;
+  border: 2px solid #1a3c34;
+  box-shadow: none;
+}
+
+.pgs-button.secondary:hover,
+.pgs-button.secondary:focus {
+  background-color: rgba(26, 60, 52, 0.08);
+  color: #c47c00;
+  border-color: #c47c00;
+}
+
+/* Disabled state */
+.pgs-button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
