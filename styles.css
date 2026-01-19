@@ -151,7 +151,7 @@
      backdrop-filter: blur(4px);
  }
 
- h2 {
+h2 {
      color: #2a5c4a;
      margin: 0em 0 0.8em;
      font-size: 2.1rem;
@@ -261,6 +261,10 @@ h3 {
 
      .content {
          padding: 35px 25px;
+     }
+
+     .inner-content {
+        text-align: center;
      }
 
      .market-item,
